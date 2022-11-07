@@ -259,7 +259,7 @@ function bigOrSmall(arr){
 arrayEvaluator = bigOrSmall(bigOrSmallArray)
 console.log(arrayEvaluator);
 ////////////////// PROBLEM 16 ////////////////////
-let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
+let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Glimmer','Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
 let loser = 'Glimmer'
 /*
   Write a function that is called theEliminator, which takes in two arguments, contestants (which will each be an array of strings), and loser (which will be a string).
@@ -271,7 +271,7 @@ function theEliminator(cons1,losers) {
  for (i=0; i < contestants.length;i++) {
   if (losers.indexOf(cons1[i]) > -1) {
     cons1.splice(i,1)
-     break;
+    i--
   }
 
   }
@@ -343,12 +343,11 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 console.log('---------------------');
 function ascending(sampleArray) {
   
-  for (i=0; i< sampleArray.length;i++){
-  if (sampleArray[i] >= sampleArray [i+1] )
-  return false
-  break;
-}return true
-}
+//   for (i=0; i< sampleArray.length;i++){
+//   if (sampleArray[i] >= sampleArray [i+1] )
+//   return false
+// }return true
+// }
 
 
 function ascending2(arr) {
@@ -363,6 +362,8 @@ function ascending2(arr) {
   }
 }
 arrayIsAscending = ascending2(sampleArray)
+console.log(arrayIsAscending);
+arrayIsAscending = ascending(sampleArray)
 console.log(arrayIsAscending);
 
 ////////////////// PROBLEM 22 ////////////////////
